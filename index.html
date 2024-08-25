@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexie's Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="start-quiz">
+        <button>Start Quiz</button>
+    </div>
+
+    <div class="rules-box">
+        <div class="title-box">
+            <h2>Quiz Rules</h2>
+        </div>
+
+        <div class="rules-list">
+            <div class="rule">1. Each question has a <span>20-second timer</span>. </div>
+            <div class="rule">2. Select only <span>one answer</span> for each question.</div>
+            <div class="rule">3. Please <span>refrain from using search engines</span> during the quiz. It's all about your knowledge!</div>
+            <div class="rule"> 4. This quiz is designed for fun and learning. <span>Relax, have fun, and see how much you know!</span></div>
+            <div class="rule">5. You get <span>points</span> based on your correct answers. </div>
+        </div>
+
+        <div class="bttns">
+            <div class="exit-bttn"><button>Exit Quiz</button></div>
+            <div class="continue-bttn"><button>Continue</button></div>
+        </div>
+    </div>
+
+    <section class="quiz-box">
+        <header>
+            <div class="titlebox"> Solidity Quiz App</div>
+            <div class="timer">
+                <span class="time-text">Time Left:</span>
+                <div class="time-display">20</div>
+            </div>
+        </header>
+        <div class="questions">
+            <div class="question"><h2>In Solidity, what is the keyword used to declare a state variable?</h2></div>
+        <div class="obj-list">
+            <div class="option"><span>static</span></div>
+            <div class="option"><span>let</span> <span class="icons icon-x">&#10006;</span></div>
+            <div class="option"><span class="icon-c">public</span> <span class="icons icon-tick">&#10004;</span></div>
+            <div class="option"><span>var</span></div>
+        </div>
+        </div>
+        <footer>
+            <div class="num-question">
+                <p><span>1</span>/5 Questions</p>
+            </div>
+            <div class="footer-bttn"><button>Next</button></div>
+        </footer>
+    </section>
+
+    <section class="results">
+        
+    </section>
+</body>
+</html>
