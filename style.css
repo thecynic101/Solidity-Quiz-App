@@ -185,8 +185,28 @@ body{
     background: #2EC4B6;
 }
 
-.option .correct{
-    background: #2EC4B6;
+.obj-list .correct{
+    background: rgb(90, 228, 90);
+    border-color: #1E1E2E;
+    border: 1px solid #1E1E2E;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all ease 0.3s;
+}
+
+.obj-list .wrong{
+    background: #db514f;
+}
+
+.obj-list .remove{
+    pointer-events: none;
 }
 
 .icons{
@@ -204,8 +224,8 @@ body{
 }
 
 .icon-x{
-    color: #FF5E5B;
-    border-color: #FF5E5B;
+    color: #ec9897;
+    border-color: #f58886;
 }
 
 footer{

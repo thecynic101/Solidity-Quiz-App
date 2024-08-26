@@ -3,7 +3,8 @@ const rulesBox= document.querySelector('.rules-box');
 const exitButton= document.querySelector('.exit-bttn button');
 const continueButton= document.querySelector('.continue-bttn button');
 const quizBox= document.querySelector('.quiz-box');
-
+const options_list = document.querySelector('.obj-list');
+const timerCount = quizBox.querySelector('.time-display')
 
 startButton.onclick = ()=>{
     rulesBox.style.display = 'block';
@@ -17,11 +18,15 @@ continueButton.onclick = ()=>{
     rulesBox.style.display = 'none';
     quizBox.style.display = 'block';
     showQuestions(0);
+    queCount(1);
+    timerStart(20);
 
 }
 
 let que_count = 0;
 let que_number = 1;
+let count;
+let timeVal = 20;
 
 const nextButton = document.getElementById('f-bttn');
 
@@ -32,6 +37,8 @@ nextButton.onclick = ()=>{
             que_number++;
             showQuestions(que_count)
             queCount(que_number);
+            timerStart(timeVal);
+            // clearInterval(count);
         }
     
 
@@ -41,7 +48,6 @@ nextButton.onclick = ()=>{
 
 function showQuestions(index){
     const question_text = document.querySelector('.question');
-    const options_list = document.querySelector('.obj-list');
     let que_tag = '<h2>'+ questions[index].numb + '. ' + questions[index].question +'</h2>';
     let options_tag = '<div class="option">' + questions[index].options[0] + '<span></span></div>'
                       + '<div class="option">' + questions[index].options[1] + '<span></span></div>'
@@ -56,14 +62,51 @@ for (let i = 0; i < option.length; i++) {
 }
 }
 
+let x_Icon = '<div><span class="icons icon-x">&#10006;</span></div>';
+let tickIcon = '<div><span class="icons icon-tick">&#10004</span></div>';
+
 function optionSelected(answer){
+    clearInterval(count);
     let selectAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
+    let allOptions = options_list.children.length;
     if (selectAnswer == correctAnswer) {
-    console.log("Answer is correct")
+        answer.classList.add('correct');
+        answer.insertAdjacentHTML('beforeend', tickIcon);
+
+    // console.log("Answer is correct")
         
     } else{
-        console.log('Answer is wrong')
+        answer.classList.add('wrong');
+        answer.insertAdjacentHTML('beforeend', x_Icon);
+
+        // console.log('Answer is wrong');
+    }
+
+    for (let i = 0; i < allOptions; i++) {
+        if (options_list.children[i].textContent == correctAnswer) {
+            options_list.children[i].setAttribute('class', 'correct' );
+            options_list.children[i].insertAdjacentHTML('beforeend', tickIcon);
+
+        }       
+    }
+
+    for (let i = 0; i < allOptions; i++) {
+        options_list.children[i].classList.add('remove');
+        
+    }
+}
+
+
+function timerStart(time){
+    count = setInterval(timer, 1000);
+    function timer(){
+        timerCount.textContent = time; 
+        time--;
+        if(time > 0) {
+            clearInterval(count);
+            timerCount.textContent = '00';
+        }
     }
 }
 
