@@ -11,7 +11,7 @@ body{
     background: #1E1E2E;
 }
 
-.start-quiz, .rules-box, .quiz-box{
+.start-quiz, .rules-box, .quiz-box , .result-section{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -185,6 +185,10 @@ body{
     background: #2EC4B6;
 }
 
+.option .correct{
+    background: #2EC4B6;
+}
+
 .icons{
     height: 28px;
     width: 28px;
@@ -234,6 +238,69 @@ footer button{
 }
 
 footer button:hover{
+    background: #2EC4B6;
+    color: #1E1E2E;
+    transition: 0.3s ease;
+}
+
+.result-section{
+    display: none;
+    background: white;
+    width: 400px;
+    padding: 20px 35px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.con-text{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.score-text{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.score-text span p{
+    font-weight: 700;
+    padding: 0 5px;
+} 
+
+.final-bttns{
+    display: flex;
+    margin: 10px;
+
+}
+
+.final-bttns button{
+    margin: 10px;
+    height: 40px;
+    font-size:20px;
+    font-weight: 500;
+    color: white;
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #1E1E2E;
+    cursor: pointer;
+}
+
+.final-bttns button:hover{
     background: #2EC4B6;
     color: #1E1E2E;
     transition: 0.3s ease;
