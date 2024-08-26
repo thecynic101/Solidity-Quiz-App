@@ -501,75 +501,77 @@ let questions = [
             'It reverts the contract to its initial state',
             'It freezes the contract'
         ]
-    }, { 
-        numb: 1,
-        question:'Which of the following correctly describes the payable keyword in Solidity?',
-        answer:'It allows a function to receive Ether',
-        options: [
-            'It allows a contract to receive tokens',
-            'It allows a function to receive Ether',
-            'It prevents a function from receiving Ether',
-            'It converts Ether to tokens'
-        ]
-    }, { 
-        numb: 1,
-        question:'What does the revert statement do in Solidity?',
-        answer:'It undoes all state changes and refunds ga',
-        options: [
-            'It logs an error message',
-            'It undoes all state changes and refunds gas',
-            'It continues the function execution',
-            'It emits an event'
-        ]
-    }, { 
-        numb: 1,
-        question:'Which of the following is true about constructor function?',
-        answer:'It is executed once when the contract is deployed.',
-        options: [
-            'It is executed once when the contract is deployed.',
-            'It can be called multiple times.',
-            'It is executed whenever the contract is called.',
-            'It is used to destroy the contract.'
-        ]
-    }, { 
-        numb: 1,
-        question:'How can you define a dynamic array in Solidity?',
-        answer:'uint[] numbers;',
-        options: [
-            'uint[10] numbers;',
-            'uint[10] memory numbers;',
-            'uint[] numbers;',
-            'uint[10] storage numbers;'
-        ]
-    }, { 
-        numb: 1,
-        question:'What does the assert() function do in Solidity?',
-        answer:'It checks a condition and throws an error if false.',
-        options: [
-            'It checks a condition and throws an error if false.',
-            'It generates a warning without reverting the transaction.',
-            'It transfers Ether to the caller.',
-            'It logs a message in the blockchain.'
-        ]
-    }, { 
-        numb: 1,
-        question:'Which keyword is used to restrict access to certain functions in Solidity?',
-        answer:'onlyOwner',
-        options: [
-            'require',
-            'onlyOwner',
-            'transfer',
-            'external'
-        ]
-    }, { 
-        numb: 1,
-        question:'Which of the following is true about the delegatecall function in Solidity?',
-        answer:'It executes a function from another contract in the context of the caller contract.',
-        options: [
-            'It calls another contract but keeps the context of the current contract.',
-            'It executes a function from another contract in the context of the caller contract.',
-            'It transfers Ether and calls another contract.',
-            'It reverts the state changes of the contract.'
-        ]
-    }
+    },
+     
+    // { 
+    //     numb: 1,
+    //     question:'Which of the following correctly describes the payable keyword in Solidity?',
+    //     answer:'It allows a function to receive Ether',
+    //     options: [
+    //         'It allows a contract to receive tokens',
+    //         'It allows a function to receive Ether',
+    //         'It prevents a function from receiving Ether',
+    //         'It converts Ether to tokens'
+    //     ]
+    // }, { 
+    //     numb: 1,
+    //     question:'What does the revert statement do in Solidity?',
+    //     answer:'It undoes all state changes and refunds ga',
+    //     options: [
+    //         'It logs an error message',
+    //         'It undoes all state changes and refunds gas',
+    //         'It continues the function execution',
+    //         'It emits an event'
+    //     ]
+    // }, { 
+    //     numb: 1,
+    //     question:'Which of the following is true about constructor function?',
+    //     answer:'It is executed once when the contract is deployed.',
+    //     options: [
+    //         'It is executed once when the contract is deployed.',
+    //         'It can be called multiple times.',
+    //         'It is executed whenever the contract is called.',
+    //         'It is used to destroy the contract.'
+    //     ]
+    // }, { 
+    //     numb: 1,
+    //     question:'How can you define a dynamic array in Solidity?',
+    //     answer:'uint[] numbers;',
+    //     options: [
+    //         'uint[10] numbers;',
+    //         'uint[10] memory numbers;',
+    //         'uint[] numbers;',
+    //         'uint[10] storage numbers;'
+    //     ]
+    // }, { 
+    //     numb: 1,
+    //     question:'What does the assert() function do in Solidity?',
+    //     answer:'It checks a condition and throws an error if false.',
+    //     options: [
+    //         'It checks a condition and throws an error if false.',
+    //         'It generates a warning without reverting the transaction.',
+    //         'It transfers Ether to the caller.',
+    //         'It logs a message in the blockchain.'
+    //     ]
+    // }, { 
+    //     numb: 1,
+    //     question:'Which keyword is used to restrict access to certain functions in Solidity?',
+    //     answer:'onlyOwner',
+    //     options: [
+    //         'require',
+    //         'onlyOwner',
+    //         'transfer',
+    //         'external'
+    //     ]
+    // }, { 
+    //     numb: 1,
+    //     question:'Which of the following is true about the delegatecall function in Solidity?',
+    //     answer:'It executes a function from another contract in the context of the caller contract.',
+    //     options: [
+    //         'It calls another contract but keeps the context of the current contract.',
+    //         'It executes a function from another contract in the context of the caller contract.',
+    //         'It transfers Ether and calls another contract.',
+    //         'It reverts the state changes of the contract.'
+    //     ]
+    // }
 ]

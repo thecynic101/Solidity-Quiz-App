@@ -27,8 +27,12 @@ let que_count = 0;
 let que_number = 1;
 let count;
 let timeVal = 20;
+let score = 0;
 
 const nextButton = document.getElementById('f-bttn');
+const resultSection = document.querySelector('.result-section');
+const replayBttn = document.querySelector('.replay');
+const quitBttn = document.querySelector('.quit');
 
 nextButton.onclick = ()=>{
     if(
@@ -39,6 +43,8 @@ nextButton.onclick = ()=>{
             queCount(que_number);
             timerStart(timeVal);
             // clearInterval(count);
+        } else{
+            displayResult();
         }
     
 
@@ -70,7 +76,10 @@ function optionSelected(answer){
     let selectAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
     let allOptions = options_list.children.length;
+    
     if (selectAnswer == correctAnswer) {
+        score += 1;
+        console.log(score)
         answer.classList.add('correct');
         answer.insertAdjacentHTML('beforeend', tickIcon);
 
@@ -97,6 +106,15 @@ function optionSelected(answer){
     }
 }
 
+function displayResult() {
+    
+    rulesBox.style.display = 'none';
+    quizBox.style.display = 'none';
+    resultSection.style.display = 'block';
+    const userScore =  resultSection.querySelector('.score-text p')
+    let scoreTag = '<span>You got <p>' + score + '</p> out of <p>50</p></span>';
+    userScore.innerHTML = scoreTag;
+}
 
 function timerStart(time){
     count = setInterval(timer, 1000);
